@@ -19,6 +19,8 @@
         "shkm/jsend": "*"
     },
     "autoload": {
-        "classmap": ["jsend/"]
+        "psr-0": {
+            "SlimJsend": "."
+        }
     }
 }
