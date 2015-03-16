@@ -1,0 +1,23 @@
+{
+    "name": "jgautheron/slim-jsend",
+    "type": "library",
+    "version": "1.0.0",
+    "description": "JSend implementation for the Slim PHP framework",
+    "keywords": ["slim","json","jsend","middleware"],
+    "homepage": "https://github.com/jgautheron/slim-jsend",
+    "license": "GPL 3.0",
+    "authors": [
+        {
+            "name": "Jonathan Gautheron",
+            "email": "jgautheron@neverblend.in",
+            "homepage": "https://github.com/jgautheron",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "classmap": ["jsend/"]
+    }
+}
