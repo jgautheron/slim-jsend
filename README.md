@@ -31,6 +31,7 @@ $app->run();
 ```
 
 ## Credits
-This project took inspiration from:
+
 - https://github.com/dogancelik/slim-json
 - https://github.com/entomb/slim-json-api
+- https://github.com/shkm/jsend
