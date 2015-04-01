@@ -18,13 +18,20 @@ require 'vendor/autoload.php';
 $app = new \Slim\Slim();
 
 // Add the middleware globally
-$app->add(new \SlimJsend\Middleware(array(
+$app->add(new \SlimJsend\Middleware([
+    // true means *
     'cors' => true,
-)));
+    // for a finer control over the allowed origin
+    'cors' => 'https://foo.com'
+]));
 
 $app->get('/', function() use ($app) {
-    // SlimJsend will automatically generate the proper response depending of the status code
-    $app->render(200, ['Oh' => 'Hai!']);
+    // SlimJsend will automatically generate the proper JSend response depending of the status code
+    $app->render(200, $messages); // success
+    $app->render(500, $data); // fail
+    
+    // if an exception is thrown, it will be automatically converted to a JSend error message
+    throw new Exception('Uh oh... missing username');
 });
 
 $app->run();
